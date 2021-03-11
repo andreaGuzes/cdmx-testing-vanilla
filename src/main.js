@@ -1,4 +1,5 @@
-//
+/* eslint-disable import/no-unresolved */
+
 import { bienvenida } from './components/welcome.js';
 import { posts } from './components/posts.js';
 import { createPosts } from './components/createposts.js';
