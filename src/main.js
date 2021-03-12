@@ -3,13 +3,10 @@
 import { bienvenida } from './components/welcome.js';
 import { posts } from './components/posts.js';
 import { createPosts } from './components/createposts.js';
+import * as firebase from './lib/firebase.js';
 
 const appElement = document.getElementById('app');
 const sesion = document.getElementById('sesion');
-const form = document.getElementById('form');
-const useremail = document.getElementById('useremail');
-const password = document.getElementById('password');
-const postDom = document.getElementById('createBtn');
 
 // router
 // let welcome=bienvenida();
@@ -23,7 +20,7 @@ export const routes = {
 };
 
 const welcomeComponent = routes[window.location.pathname];
-welcomeComponent(appElement);
+welcomeComponent(appElement, firebase);
 
 function onNavigate(pathname) {
   window.history.pushState(
@@ -33,9 +30,5 @@ function onNavigate(pathname) {
   );
 
   const component = routes[pathname];
-  component(appElement);
+  component(appElement, firebase);
 }
-
-sesion.addEventListener('click', () => {
-  onNavigate('/posts');
-});

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`new suite boton cambia texto 1`] = `
+"
+    <h1>Bienvenida a mi Red social</h1>
+    <button id=\\"botoncito\\">Soy un boton</button>
+    <div id=\\"postContainer\\"><p>Ya llegue</p></div>
+  "
+`;
+
+exports[`new suite deberia renderizar 1`] = `
+"
+    <h1>Bienvenida a mi Red social</h1>
+    <button id=\\"botoncito\\">Soy un boton</button>
+    <div id=\\"postContainer\\"><p>test</p></div>
+  "
+`;
